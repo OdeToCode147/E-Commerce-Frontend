@@ -13,7 +13,7 @@ const PaymentPage = ({ response, setResponse }) => {
 
   const [randomItems, setRandomItems] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/store")
+    fetch("https://e-commerce-backend-wq9d.onrender.com/store")
       .then((response) => response.json())
       .then((json) => setRandomItems(json[0]));
   }, []);
@@ -24,7 +24,7 @@ const PaymentPage = ({ response, setResponse }) => {
       setItemsDetails(randomItems.items.find((item) => item.id == productID));
     }
     setTotal(response * itemDetails.cost);
-    
+
     window.scrollTo(0, 0);
   }, [randomItems, productID, response]);
   console.log(itemDetails);

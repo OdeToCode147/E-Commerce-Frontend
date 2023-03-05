@@ -6,7 +6,7 @@ import "./Home.css";
 const Home = () => {
   const [randomItems, setRandomItems] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/store")
+    fetch("https://e-commerce-backend-wq9d.onrender.com/store")
       .then((response) => response.json())
       .then((json) => setRandomItems(json[0]));
   }, []);

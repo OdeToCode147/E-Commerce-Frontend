@@ -10,7 +10,7 @@ const CategoryPage = () => {
 
   const [randomItems, setRandomItems] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/alldata")
+    fetch("https://e-commerce-backend-wq9d.onrender.com/alldata")
       .then((response) => response.json())
       .then((json) => setRandomItems(json));
   }, [CategoryID]);
